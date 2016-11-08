@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  padding-top: 100px;
+  padding-top: 130px;
 }
 
 section {
@@ -29,6 +29,7 @@ textarea {
 .center h1 {
   margin-bottom: 10px;
 }
+
 /*menu*/
 nav ul li{
 	display : inline-block;
@@ -126,7 +127,7 @@ border: 1px solid #4BA0CE ;
 }
 
  input {
-border: 1px solid #4BA0CE ;
+  border: 1px solid #4BA0CE ;
   width: 100%;
   margin-bottom: 35px;
   height: 35px;
@@ -172,8 +173,38 @@ aside {
     }
   }
 }
+/* microposts */
 
-.gravatar {
-  float: left;
-  margin-right: 10px;
+.microposts {
+  list-style: none;
+  margin: 10px 0 0 0;
+
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #AB71AD;
+  }
+}
+.content {
+  display: block;
+}
+.timestamp {
+  color: #8D8FAA;
+}
+
+aside {
+  textarea {
+    height: 200px;
+    margin-bottom: 15px;
+  }
+}
+.row .span4 {
+  h1{
+    text-align: center;
+  }
+  padding-top: 30px;
+  text-align: center;
+}
+
+.imgCenter {
+  text-align:center;
 }

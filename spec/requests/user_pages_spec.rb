@@ -10,35 +10,53 @@ describe "User pages" do
     it { should have_selector('title', text: full_title('Sign up')) }
   end
 
-  describe "profile page" do
-    let(:user) { FactoryGirl.create(:user) }
-    before { visit user_path(user) }
+   describe "profile page" do
+      let(:user) { FactoryGirl.create(:user) }
+      let!(:m1) { FactoryGirl.create(:micropost, user: user, content: "Foo") }
+      let!(:m2) { FactoryGirl.create(:micropost, user: user, content: "Bar") }
 
-    it { should have_selector('h1',    text: user.name) }
-    it { should have_selector('title', text: user.name) }
-  end
-describe "signup page" do
+      before { visit user_path(user) }
 
-    before { visit '/signup' }
+      it { should have_content(user.name) }
+      it { should have_title(user.name) }
 
-    let(:submit) { "Create my account" }
-
-    describe "with invalid information" do
-      it "should not create a user" do
-        expect { click_button submit }.not_to change(User, :count)
+      describe "microposts" do
+        it { should have_content(m1.content) }
+        it { should have_content(m2.content) }
+        it { should have_content(user.microposts.count) }
       end
     end
+  describe "signup page" do
 
-    describe "with valid information" do
-      before do
-        fill_in "Name",         with: "Example User"
-        fill_in "Email",        with: "user@example.com"
-        fill_in "Password",     with: "foobar"
-        fill_in "Confirmation", with: "foobar"
+      before { visit '/signup' }
+
+      let(:submit) { "Create my account" }
+
+      describe "with invalid information" do
+        it "should not create a user" do
+          expect { click_button submit }.not_to change(User, :count)
+        end
       end
 
-      it "should create a user" do
-        expect { click_button submit }.to change(User, :count).by(1)
+      describe "with valid information" do
+        before do
+          fill_in "Name",         with: "Example User"
+          fill_in "Email",        with: "user@example.com"
+          fill_in "Password",     with: "foobar"
+          fill_in "Confirmation", with: "foobar"
+        end
+        
+        describe "after saving the user" do
+          before { click_button submit }
+          let(:user) { User.find_by(email: 'user@example.com') }
+
+          it { should have_link('Sign out') }
+          it { should have_title(user.name) }
+          it { should have_selector('div.alert.alert-success', text: 'Welcome') }
+        end
+
+        it "should create a user" do
+          expect { click_button submit }.to change(User, :count).by(1)
       end
     end
   end

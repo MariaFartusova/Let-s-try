@@ -5,6 +5,9 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.1'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'bcrypt-ruby', '3.1.2'
+gem 'faker', '>=1.6.6'
+gem 'will_paginate', '>=3.0.4'
+gem 'bootstrap-will_paginate', '>=0.0.9'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
