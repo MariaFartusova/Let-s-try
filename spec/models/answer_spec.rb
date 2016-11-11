@@ -1,9 +1,10 @@
 require 'rails_helper'
-  describe Question do
-    let(:user) { FactoryGirl.create(:user) }
-    before { @question = user.questions.build(content: "Lorem ipsum") }
 
-    subject { @question }
+ describe Answer do
+    let(:user) { FactoryGirl.create(:user) }
+    before { @answer = user.answers.build(content: "Lorem ipsum") }
+
+    subject { @answer }
 
     it { should respond_to(:content) }
     it { should respond_to(:user_id) }
@@ -13,17 +14,17 @@ require 'rails_helper'
     it { should be_valid }
 
     describe "when user_id is not present" do
-      before { @question.user_id = nil }
+      before { @answer.user_id = nil }
       it { should_not be_valid }
     end
 
     describe "with blank content" do
-      before { @question.content = " " }
+      before { @answer.content = " " }
       it { should_not be_valid }
     end
 
     describe "with content that is too long" do
-      before { @question.content = "a" * 141 }
+      before { @answer.content = "a" * 141 }
       it { should_not be_valid }
     end
   end

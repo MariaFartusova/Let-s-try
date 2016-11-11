@@ -8,15 +8,14 @@
       </h1>
     </section>
   </aside>
-
 </div>
 
-  <div class="span8">
-    <% if @user.questions.any? %>
-      <h3>  Questions     [<%= @user.questions.count %>]</h3>
-      <ol class="questions">   
-        <%= render partial: 'shared/question', collection: @questions %>
-      </ol>
-      <%= will_paginate @questions %>
-    <% end %>
-  </div>
+<div class="span8">
+  <% if @user.questions.any? %>
+    <h3>  Questions     [<%= @user.questions.count %>]</h3>
+    <ol class="questions">   
+      <%= render partial: 'shared/question', collection: @questions %>
+    </ol>
+    <%= will_paginate @questions %>
+  <% end %>
+</div>
