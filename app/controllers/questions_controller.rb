@@ -4,9 +4,6 @@ class QuestionsController < ApplicationController
   def index
     @questions = Question.all
   end
-
-  def show
-  end
   
   def create
   	@question = current_user.questions.build(question_params)
@@ -17,9 +14,6 @@ class QuestionsController < ApplicationController
       @feed_items = []
       render 'static_pages/home'
     end
-  end
-
-  def new
   end
 
   def destroy

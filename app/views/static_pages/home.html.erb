@@ -1,4 +1,3 @@
-
 <% if signed_in? %>
   <div class="row">
     <aside class="span4">
@@ -11,10 +10,8 @@
     </aside>
     <div class="span8">
       <h3>Question Feed</h3>
-      <%= render 'shared/questions' %>
+      <%= render 'questions/show_all' %>
     </div>
-  </div>
-  </div>
   </div>
 <% else %>
   <div class="center hero-unit">
