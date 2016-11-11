@@ -1,26 +1,21 @@
-<% if signed_in? %>
-  <h1>Give me your questions</h1>
-  <div class="imgCenter">
-    <%= link_to image_tag("ll.jpg", alt: "q"), 'http://rubyonrails.org/' %>
-  </div>
 
+<% if signed_in? %>
   <div class="row">
     <aside class="span4">
       <section>
         <%= render 'shared/user_info' %>
       </section>
       <section>
-        <%= render 'shared/micropost_form' %>
+        <%= render 'shared/question_form' %>
       </section>
     </aside>
     <div class="span8">
-      <h3>Micropost Feed</h3>
-      <%= render 'shared/feed' %>
+      <h3>Question Feed</h3>
+      <%= render 'shared/questions' %>
     </div>
   </div>
   </div>
-
-
+  </div>
 <% else %>
   <div class="center hero-unit">
     <h1> QA </h1>

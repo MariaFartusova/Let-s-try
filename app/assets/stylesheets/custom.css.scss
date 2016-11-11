@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  padding-top: 130px;
+  padding-top: 3px;
 }
 
 section {
@@ -173,15 +173,51 @@ aside {
     }
   }
 }
-/* microposts */
+/* answers */
 
-.microposts {
+.answers {
   list-style: none;
   margin: 10px 0 0 0;
 
   li {
     padding: 10px 0;
-    border-top: 1px solid #AB71AD;
+  }
+}
+.content {
+  display: block;
+}
+.timestamp {
+  color: #8D8FAA;
+}
+
+aside {
+  textarea {
+    height: 500px;
+
+    margin-bottom: 15px;
+  }
+}
+.row .span4 {
+  h1{
+    text-align: center;
+  }
+  padding-top: 30px;
+  text-align: center;
+}
+
+.imgCenter {
+  text-align:center;
+}
+
+
+/* questions */
+
+.questions {
+  list-style: none;
+  margin: 10px 0 0 0;
+
+  li {
+    padding: 10px 0;
   }
 }
 .content {
@@ -197,14 +233,22 @@ aside {
     margin-bottom: 15px;
   }
 }
-.row .span4 {
-  h1{
+h2{
+    margin: 0;     
+    color: #666;
+    padding-top: 90px;
+    font-size: 52px;
+    font-family: "trebuchet ms", sans-serif;    
+}
+.item{
+    background: #333;    
     text-align: center;
-  }
-  padding-top: 30px;
-  text-align: center;
+    height: 300px !important;
 }
-
-.imgCenter {
-  text-align:center;
+.carousel{
+    margin-top: 20px;
 }
+.btn-black { 
+    background-color:#969696; 
+    color:#FFFFFF; 
+} 

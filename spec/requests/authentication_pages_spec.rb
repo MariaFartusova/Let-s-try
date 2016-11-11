@@ -33,11 +33,11 @@ describe "Authentication" do
                   it { should have_link('Sign in') }
                end
     			 end
-            describe "in the Microposts controller" do
+            describe "in the Answers controller" do
               before do
                 click_link "Sign out"
               describe "submitting to the create action" do
-                before { post microposts_path }
+                before { post answers_path }
                 specify { expect(response).to redirect_to(signin_path) }
               end
 
@@ -54,6 +54,5 @@ describe "Authentication" do
     	     it { should_not have_link('Sign in', href: signin_path) }
             end
 	   end
-end
 end
 end

@@ -1,29 +1,56 @@
-	<header class="navbar navbar-fixed-top navbar-inverse">
-	  <div class="navbar-inner">
-	    <div class="container">
-	      <%= link_to "QA", root_path, id: "logo" %>
-	       <nav>
-	         <ul class="nav pull-right">
-	           <li><%= link_to "Home", root_path %></li>
-	           <% if signed_in? %>
-               		<li><%= link_to "Users", '#' %></li>
-	                <li id="fat-menu" class="dropdown">
-	                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-	                   Account <b class="caret"></b>
-	                </a>
-	                <ul class="dropdown-menu">
-	                 	<li><%= link_to "Profile", current_user %></li>
-	               		<li><%= link_to "Settings", '#' %></li>
-	                    <li class="divider"></li>
-	                    <li> <%= link_to "Sign out", signout_path, method: "delete" %> </li>
-	                </ul>
-	            </li>
-	          	<% else %>
-	            	<li><%= link_to "Sign in", signin_path %></li>
-	         	 <% end %>
-	         </ul>
-	       </nav>
+<nav class="navbar navbar-inverse" role="navigation">
+  	<div class="container-fluid">
+  	<div class="navbar-header">
+  	<div class=«transparency»>
+     	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        	<span class="sr-only">Toggle navigation</span>
+       		<span class="icon-bar"></span>
+      		<span class="icon-bar"></span>
+      		<span class="icon-bar"></span>
+      	</button>
+      	<a class="navbar-brand" href="#">QA</a>
+   	</div>
+   	</div>
+
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav"> </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Home", root_path %></li>
+	    <% if signed_in? %>
+       		<li><%= link_to "Profile", current_user %></li>
+       		<li> <%= link_to "Sign out", signout_path, method: "delete" %> </li>
+      	<% else %>
+        	<li><%= link_to "Sign in", signin_path %></li>
+     	<% end %>
+	  </ul>
+	</div>
+
+	<div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
+	  <ol class="carousel-indicators">
+	    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	    <li data-target="#myCarousel" data-slide-to="1"></li>
+	  </ol>  
+	   
+	  <div class="carousel-inner">
+	    <div class="active item">
+	      <h2>QA</h2>
+	      <div class="carousel-caption">
+	        <h3>Write all your questions</h3>
+	      </div>
+	    </div>
+	    <div class="item">
+	      <h2>QA</h2>
+	      <div class="carousel-caption">
+	        <h3>Aswer users's questions</h3>
+	      </div>
 	    </div>
 	  </div>
-	</header>
-
+	  <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+	    <span class="glyphicon glyphicon-chevron-left"></span>
+	  </a>
+	  <a class="carousel-control right" href="#myCarousel" data-slide="next">
+	    <span class="glyphicon glyphicon-chevron-right"></span>
+	  </a>
+	</div>
+	</nav>

@@ -8,6 +8,7 @@ gem 'bcrypt-ruby', '3.1.2'
 gem 'faker', '>=1.6.6'
 gem 'will_paginate', '>=3.0.4'
 gem 'bootstrap-will_paginate', '>=0.0.9'
+gem 'rspec-its', '>=1.2.0'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -29,6 +30,7 @@ gem 'rspec-core','>=3.4.4'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'web-console', '~> 2.0', group: :development
 gem 'pg', '0.15.1'
+gem 'awesome_print'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
