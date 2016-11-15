@@ -1,8 +1,8 @@
 /* universal */
 $grayMediumLight: #eaeaea;
 
-
 /* static elems */
+
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -38,14 +38,16 @@ textarea {
 }
 
 /*menu*/
+
 nav ul li{
-	display : inline-block;
+	display: inline-block;
 }
+
 nav ul a {
-	display : block;
-	text-decoration:none;
-	padding:3px 6px;
+	display: block;
+	padding: 3px 6px;
 }
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -72,6 +74,7 @@ p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
+
 /* header */
 
 #logo {
@@ -119,14 +122,14 @@ footer ul {
 }
 
 footer ul li {
-  float: left;
   margin-left: 10px;
 }
+
 /* forms */
 
 
 form3 #user_a input{
-border: 1px solid #4BA0CE ;
+  border: 1px solid #4BA0CE ;
   width: 100%;
   margin-bottom: 35px;
   height: 135px;
@@ -138,6 +141,7 @@ border: 1px solid #4BA0CE ;
   margin-bottom: 35px;
   height: 35px;
 }
+
 #error_explanation {
   color: #f00;
   ul {
@@ -155,9 +159,14 @@ border: 1px solid #4BA0CE ;
   margin-top: 45px;
   @include box_sizing;
 }
+
 /* sidebar */
 
 aside {
+  textarea {
+    height: 500px;
+    margin-bottom: 15px;
+  }
   section {
     padding: 10px 0;
     border-top: 1px solid $grayMediumLight;
@@ -179,6 +188,7 @@ aside {
     }
   }
 }
+
 /* answers */
 
 .answers {
@@ -189,20 +199,15 @@ aside {
     padding: 10px 0;
   }
 }
+
 .content {
   display: block;
 }
+
 .timestamp {
   color: #8D8FAA;
 }
 
-aside {
-  textarea {
-    height: 500px;
-
-    margin-bottom: 15px;
-  }
-}
 .row .span4 {
   h1{
     text-align: center;
@@ -226,9 +231,11 @@ aside {
     padding: 10px 0;
   }
 }
+
 .content {
   display: block;
 }
+
 .timestamp {
   color: #8D8FAA;
 }
@@ -239,6 +246,7 @@ aside {
     margin-bottom: 15px;
   }
 }
+
 h2{
     margin: 0;     
     color: #666;
@@ -246,15 +254,21 @@ h2{
     font-size: 52px;
     font-family: "trebuchet ms", sans-serif;    
 }
+
 .item{
     background: #333;    
     text-align: center;
     height: 300px !important;
 }
+
 .carousel{
     margin-top: 20px;
 }
+
 .btn-black { 
     background-color:#969696; 
     color:#FFFFFF; 
 } 
+
+
+

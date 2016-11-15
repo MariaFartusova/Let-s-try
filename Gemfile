@@ -3,12 +3,12 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
-gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'twitter-bootstrap-rails', git: 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'bcrypt-ruby', '3.1.2'
-gem 'faker', '>=1.6.6'
-gem 'will_paginate', '>=3.0.4'
-gem 'bootstrap-will_paginate', '>=0.0.9'
-gem 'rspec-its', '>=1.2.0'
+gem 'faker', '>= 1.6.6'
+gem 'will_paginate', '>= 3.0.4'
+gem 'bootstrap-will_paginate', '>= 0.0.9'
+gem 'rspec-its', '>= 1.2.0'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -25,7 +25,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
-gem 'rspec-core','>=3.4.4'
+gem 'rspec-core','>= 3.4.4'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'web-console', '~> 2.0', group: :development
@@ -46,7 +46,7 @@ end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'rspec-rails', '>=2.13.1'
+  gem 'rspec-rails', '>= 2.13.1'
   # Access an IRB console on exception pages or by using <%= console %> in views
   
 
@@ -55,7 +55,7 @@ group :development, :test do
 end
 group :test do
   gem 'selenium-webdriver','2.35.1'
-  gem 'capybara','>=2.1.0'
+  gem 'capybara','>= 2.1.0'
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
   gem 'factory_girl_rails', '4.2.1'
 end

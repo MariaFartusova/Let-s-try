@@ -2,7 +2,7 @@ class QuestionsController < ApplicationController
   before_action :signed_in_user
 
   def index
-    @questions = Question.all
+    @questions = Question.paginate(page: params[:page])
   end
   
   def create
