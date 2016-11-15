@@ -1,5 +1,5 @@
 class AnswersController < ApplicationController
-  before_action :signed_in_user
+  before_action :check_user_signed_in
 
   def create
     @answer = current_user.answers.build(answer_params)
