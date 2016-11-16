@@ -1,4 +1,4 @@
-class AnswersController < ApplicationController
+class Questions: :AnswersController < ApplicationController
   before_action :check_user_signed_in
 
   def create

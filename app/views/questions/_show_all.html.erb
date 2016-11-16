@@ -9,7 +9,7 @@
         <li class="list-group-item"> <%= answer.content%> </li>
       <% end %>
     </ul>
-    <%= render 'shared/answer_form', answer: question.answers.build %> 
+    <%= render 'shared/answer_form', answer: question.answers.build, question: question %> 
     <% if current_user?(question.user) %>
       <%= link_to "delete", question, method: :delete, data: { confirm: "You sure?" }, title: question.content %>
     <% end %>
