@@ -9,6 +9,9 @@ gem 'faker', '>= 1.6.6'
 gem 'will_paginate', '>= 3.0.4'
 gem 'bootstrap-will_paginate', '>= 0.0.9'
 gem 'rspec-its', '>= 1.2.0'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-vkontakte'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
