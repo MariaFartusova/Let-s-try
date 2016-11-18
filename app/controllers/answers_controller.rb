@@ -1,4 +1,4 @@
-class Questions: :AnswersController < ApplicationController
+class AnswersController < ApplicationController
   before_action :check_user_signed_in
 
   def create
@@ -32,3 +32,4 @@ class Questions: :AnswersController < ApplicationController
     redirect_to root_url if @answer.nil?
   end
 end
+
