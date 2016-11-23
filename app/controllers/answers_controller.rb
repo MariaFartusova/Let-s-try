@@ -21,6 +21,10 @@ class AnswersController < ApplicationController
       redirect_to root_url
   end
 
+  def make
+    @newquestion = newquestion.answers.build
+  end
+
   private
 
   def answer_params

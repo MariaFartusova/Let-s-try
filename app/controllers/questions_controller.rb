@@ -22,6 +22,28 @@ class QuestionsController < ApplicationController
       @question.destroy
     end
       redirect_to root_url
+  end 
+
+  def make
+    @newquestion = newquestion.answers.build
+  end
+  
+  def show
+    @question = Question.find_by(id: params[:id])
+  end
+
+  def edit
+    @question = Question.find_by(id: params[:id])
+  end
+
+  def update
+    @question = Question.find_by(params[:id])
+    if @question.update_attributes(question_params)
+      flash[:success] = "Question updated"
+      redirect_to root_url 
+    else
+      render 'edit'
+    end
   end
 
 private
