@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
   before_action :check_user_signed_in
+  before_action :correct_user
 
   def index
     @questions = Question.paginate(page: params[:page])
@@ -24,10 +25,6 @@ class QuestionsController < ApplicationController
       redirect_to root_url
   end 
 
-  def make
-    @newquestion = newquestion.answers.build
-  end
-  
   def show
     @question = Question.find_by(id: params[:id])
   end

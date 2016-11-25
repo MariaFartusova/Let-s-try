@@ -1,4 +1,4 @@
-<%- @questions.each do |question| %>
+<%= @questions.each do |question| %>
   <li id=" <%= question.id %>">
     <%= link_to gravatar_for(question.user), question.user %>
     <span class="user"> <%= link_to question.user.name, question.user %>  </span>
@@ -8,8 +8,7 @@
       <% question.answers.each do |answer| %>
         <li class="list-group-item"> <%= answer.content%> </li>
       <% end %>
-    </ul>
-    <%= render 'shared/answer_form', answer: question.answers.build %> 
+    </ul><%= render 'shared/answer_form', answer: question.answers.build %> 
     <% if current_user?(question.user) %>
       <%= link_to "delete", question, method: :delete, data: { confirm: "You sure?" }, title: question.content %>
     <% end %>

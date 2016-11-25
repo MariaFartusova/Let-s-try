@@ -1,5 +1,10 @@
 class AnswersController < ApplicationController
   before_action :check_user_signed_in
+  before_action :correct_user
+
+  def show
+    @answer = current_user.answers.find_by(id: params[:id])
+  end
 
   def create
     @answer = current_user.answers.build(answer_params)
@@ -19,10 +24,6 @@ class AnswersController < ApplicationController
       @answer.destroy
     end
       redirect_to root_url
-  end
-
-  def make
-    @newquestion = newquestion.answers.build
   end
 
   private
