@@ -1,0 +1,23 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h1>
+        <%= gravatar_for @user %>
+        <h3><%= @user.name %></h3>
+      </h1>
+    </section>
+  </aside>
+</div>
+
+<div class="span8">
+  <% if @user.questions.any? %>
+    <h3>  Questions     [<%= @user.questions.count %>]</h3>
+    <div class="span8">
+  </div>
+    <ol class="questions">   
+      <%= render partial: 'shared/question', collection: @questions %>
+    </ol>
+    <%= will_paginate @questions %>
+  <% end %>
+</div>
