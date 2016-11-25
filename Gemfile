@@ -28,7 +28,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
-gem 'rspec-core','>= 3.4.4'
+gem 'rspec-core', '>= 3.4.4'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'web-console', '~> 2.0', group: :development
@@ -57,8 +57,8 @@ group :development, :test do
   gem 'spring'
 end
 group :test do
-  gem 'selenium-webdriver','2.35.1'
-  gem 'capybara','>= 2.1.0'
+  gem 'selenium-webdriver', '2.35.1'
+  gem 'capybara', '>= 2.1.0'
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
   gem 'factory_girl_rails', '4.2.1'
 end
