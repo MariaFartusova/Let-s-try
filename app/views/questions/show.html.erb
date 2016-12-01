@@ -4,9 +4,6 @@
   <span class="timestamp">
     Posted <%= time_ago_in_words(answer.created_at) %> ago.
   </span>
-  <div class="span8">
-    <%= render 'like_form' if signed_in? %>
-  </div>
 </li>
 
 
