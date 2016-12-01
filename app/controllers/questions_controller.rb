@@ -1,6 +1,5 @@
 class QuestionsController < ApplicationController
-  before_action :check_user_signed_in
-  before_action :correct_user
+  include SessionsHelper
 
   def index
     @questions = Question.paginate(page: params[:page])

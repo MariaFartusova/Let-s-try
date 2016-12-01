@@ -10,7 +10,7 @@
   </ul>
   <%= render 'shared/answer_form', answer: question.answers.build %> 
   <% if current_user?(question.user) %>
-    <%= link_to "delete", question, method: :delete, data: { confirm: "You sure?" } %>
+    <%= link_to "delete", question, method: :delete, data: { confirm: "You sure?" }, title: question.content %>
   <% end %>
 </li>
 

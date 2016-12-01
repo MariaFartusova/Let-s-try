@@ -1,5 +1,5 @@
 class AnswersController < ApplicationController
-  before_action :check_user_signed_in
+  include SessionsHelper
   before_action :correct_user
 
   def show
